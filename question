@@ -1,0 +1,64 @@
+Question:
+Design and Implement a System for Managing Traffic Fines 
+You are tasked with designing a Traffic Fine Management System using object
+oriented programming concepts: encapsulation, inheritance, and abstraction (or 
+interfaces). The system should enforce strict validation and include exception 
+handling. 
+Requirements: 
+1. Class Definitions: 
+o Person (Base Class): 
+ Attributes: 
+ name (String) 
+ licenseNumber (String) 
+ Methods: 
+ Constructor: To initialize the attributes. 
+ displayDetails(): Abstract method to display details. 
+o Driver (Derived Class from Person): 
+ Additional Attributes: 
+ totalFines (double): Total fine amount for the driver. 
+ violationCount (int): Count of traffic violations. 
+ Methods: 
+ Constructor: Initializes attributes of Driver including 
+base class attributes. 
+ addViolation(fineAmount: double): Adds a violation fine 
+to the driver and increments the violation count. Ensure 
+the fine is positive. 
+ resetViolations(): Resets the violation count and total 
+fines. 
+ displayDetails(): Implements the abstract method to 
+display all driver details. 
+o TrafficViolation (Base Class or Interface): 
+ Methods: 
+ validateViolation(): Abstract method to validate if the 
+violation type and fine are correct. 
+o SpecificViolation (Derived Class from TrafficViolation): 
+ Attributes: 
+ violationType (String): Type of violation (e.g., 
+"Speeding", "Parking", etc.). 
+ fineAmount (double): Fine amount for the violation. 
+ Methods: 
+ Constructor: To initialize violation details. 
+ validateViolation(): Ensures the fine amount is non
+negative and that the violation type is from a predefined 
+list (e.g., "Speeding", "Parking", etc.). 
+ getViolationDetails(): Returns violation details as a 
+string. 
+2. Validation Rules: 
+o licenseNumber should be alphanumeric and 8-12 characters long. 
+o fineAmount must be greater than zero. 
+o violationType must be one of the valid types: "Speeding", "Parking", 
+"Signal Violation". 
+3. Exception Handling: 
+o Throw an exception if: 
+ fineAmount is negative or zero. 
+ licenseNumber format is invalid. 
+ violationType is not in the predefined list. 
+o Handle exceptions to print meaningful error messages. 
+4. Execution Flow: 
+o Create multiple drivers with license numbers and add traffic violations 
+for them. 
+o Validate violation details before adding them to the driver. 
+o Display all details for each driver including their total fines and 
+violations. 
+o Reset violations for a specific driver and demonstrate the system's 
+functionality.
